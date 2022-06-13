@@ -1,24 +1,23 @@
 import './App.css';
-import Home from './pages/Home';
-import ProductsDetail from './pages/ProductsDetail';
 
-import Login from './pages/Login';
-import Purchases  from './pages/Purchases';
-
-import LoadingScreen from './components/LoadingScreen';
-import ProtectedRoutes  from './components/ProtectedRoutes';
-import NavBar from './components/NavBar';
+import {Purchases,Login,ProductsDetail,Home}  from './pages/';
+import {NavBar,ProtectedRoutes,LoadingScreen} from './components/';
 import { Container } from 'react-bootstrap';
 import { HashRouter, Route, Routes } from 'react-router-dom';
+import {useSelector} from'react-redux';
 
 
 function App() {
+
+const isLoading = useSelector(state => state.isLoading)
+
+
   return (
     <HashRouter>
     <NavBar />
     <Container>
-    <LoadingScreen />
-    
+   { isLoading && <LoadingScreen />}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products/:id" element={<ProductsDetail />} />

@@ -1,11 +1,5 @@
-import React from 'react';
-
-const index = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
-
-export default index;
+export { default as Home } from "./Home";
+export { default as Favorites } from "./Favorites";
+export { default as Login } from "./Login";
+export { default as ProductsDetail } from "./ProductsDetail";
+export {default as Purchases}from "./Purchases";
