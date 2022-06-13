@@ -24,7 +24,7 @@ const isLoading = useSelector(state => state.isLoading)
         <Route path="/login" element={<Login />} />
 
         <Route element={<ProtectedRoutes />}>
-          <Route path="/purchases" element={<Purchases />} />
+          <Route path="/purchase" element={<Purchases />} />
         </Route>
 
       </Routes>

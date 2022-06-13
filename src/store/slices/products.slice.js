@@ -15,8 +15,8 @@ setProducts:(state, action) =>{
 export const {setProducts  } = productsSlice.actions;
 export const getProducts = () => (dispatch) => {
     dispatch(setIsLoading(true));
-    return axios.get("https://ecommerce-api-react.herokuapp.com/api/v1/products")
-        .then(res => dispatch(setProducts(res.data)))
+    return axios.get("https://ecommerce-api-react.herokuapp.com/api/v1/")
+        .then(res => dispatch(setProducts(res.data.products)))
         .finally(() => dispatch(setIsLoading(false)));
 }
 export default productsSlice.reducer;
