@@ -1,12 +1,7 @@
-import { configureStore } from "@reduxjs/toolkit";
-import isLoading from "./slices/isLoading.slice";
-import news from "./slices/news.slice";
-import favorites from "./slices/favorites.slice";
+import { configureStore } from '@reduxjs/toolkit'
 
 export default configureStore({
   reducer: {
-    isLoading,
-    news,
-    favorites
-  }
-});
+
+	}
+})

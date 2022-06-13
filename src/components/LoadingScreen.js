@@ -3,7 +3,7 @@ import React from 'react';
 const LoadingScreen = () => {
     return (
         <div>
-            helo
+            LoadingScreen
         </div>
     );
 };

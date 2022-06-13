@@ -18,6 +18,7 @@ function App() {
     <NavBar />
     <Container>
     <LoadingScreen />
+    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products/:id" element={<ProductsDetail />} />
