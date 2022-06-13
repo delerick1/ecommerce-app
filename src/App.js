@@ -1,7 +1,13 @@
 import './App.css';
-import { Home,ProductsDetail, Login,Purchases } from './pages';
-import { LoadingScreen, NavBar, ProtectedRoutes } from './components';
-import { useSelector } from 'react-redux';
+import Home from './pages/Home';
+import ProductsDetail from './pages/ProductsDetail';
+
+import Login from './pages/Login';
+import Purchases  from './pages/Purchases';
+
+import LoadingScreen from './components/LoadingScreen';
+import ProtectedRoutes  from './components/ProtectedRoutes';
+import NavBar from './components/NavBar';
 import { Container } from 'react-bootstrap';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
@@ -11,7 +17,7 @@ function App() {
     <HashRouter>
     <NavBar />
     <Container>
-      { isLoading && <LoadingScreen /> }
+    <LoadingScreen />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products/:id" element={<ProductsDetail />} />
