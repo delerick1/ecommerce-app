@@ -1,6 +1,6 @@
 import './App.css';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import {Purchases,Login,ProductsDetail,Home}  from './pages/';
+import {Purchases,Login,ProductsDetail,Home, Favorites}  from './pages/';
 import {NavBar,ProtectedRoutes,LoadingScreen} from './components/';
 import { Container } from 'react-bootstrap';
 import {useSelector} from'react-redux';
@@ -21,6 +21,7 @@ const isLoading = useSelector(state => state.isLoading)
         <Route path="/" element={<Home />} />
         <Route path="/products/:id" element={<ProductsDetail />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/favorite" element={<Favorites/>} />
 
         <Route element={<ProtectedRoutes />}>
           <Route path="/purchase" element={<Purchases />} />
