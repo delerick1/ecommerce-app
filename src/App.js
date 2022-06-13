@@ -1,9 +1,8 @@
 import './App.css';
-
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import {Purchases,Login,ProductsDetail,Home}  from './pages/';
 import {NavBar,ProtectedRoutes,LoadingScreen} from './components/';
 import { Container } from 'react-bootstrap';
-import { HashRouter, Route, Routes } from 'react-router-dom';
 import {useSelector} from'react-redux';
 
 
